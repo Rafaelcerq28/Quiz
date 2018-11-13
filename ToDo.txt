@@ -1,1 +1,14 @@
 #1  Fazer introdução e guia das teclas para o usuario
+
+
+
+
+Bem vindo ao Quiz de conhecimentos gerais
+
+Aqui vao algumas dicas básicas para a conclusão dos desafios:
+
+#1 Mantenha a calma (Isso é muito importante)
+
+#2 Para que suas informações sejam enviadas para jogo é necessário pressionar ENTER
+
+#3
