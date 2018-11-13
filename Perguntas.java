@@ -15,16 +15,16 @@ public class Perguntas {
 	
 	//exibe o gabarito
 	public void gabarito() {
-		int i =0;
+		int i = 0;
+		
 		for(String s : questao) {
 			System.out.printf("\nQuestao %d)\n",i+1);
 			System.out.println("Pergunta: " + questao.get(i));
 			System.out.println("Resposta Escolhida: " + respEscolhida.get(i));
 			System.out.println("Resposta Correta: " + respCorreta.get(i));
-			
 			System.out.println("\n");
 			i++;
-		}		
+		}
 	}
 	
 	public static String[] coletaPergunta(String[] vetor,int cont, Perguntas gabarito) throws SQLException {
@@ -88,9 +88,10 @@ public class Perguntas {
 		//armazena na variavel a String com a resposta
 		while(rs.next()) {
 			resposta = rs.getString("resposta");
+			gabarito.respCorreta.add(resposta);
+			//System.out.println("INSERIDO NO GABARITO!" + resposta);
 		}
 		
-		gabarito.respCorreta.add(resposta);
 		
 		//pega o palpite do usuario
 		Scanner sc = new Scanner(System.in);
@@ -121,7 +122,7 @@ public class Perguntas {
 				break;
 			case "B":
 				cmp =  alternativa[1].equalsIgnoreCase(resposta);
-				gabarito.respCorreta.add(alternativa[1]);
+				gabarito.respEscolhida.add(alternativa[1]);
 				if(cmp == true) {
 					pontos = 10;
 				}
