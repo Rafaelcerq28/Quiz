@@ -15,11 +15,11 @@ CREATE TABLE PERGUNTA(
 
 
 insert into PERGUNTA (PERGUNTA,a,b,c,d,e,RESPOSTA) values 
-('Qual dos animais abaixo é mais rápido?','O Elefante','O porco','A Girafa','O gato doméstico','A cobra','A Girafa');
+('Qual dos animais abaixo é mais rápido?','O elefante','O porco','A girafa','O gato doméstico','A cobra','A girafa');
 insert into PERGUNTA (PERGUNTA,a,b,c,d,e,RESPOSTA) values 
 ('Que animal, em média, vive mais?','O chimpanzé','O coelho','O porco','A girafa','O rinoceronte','O rinoceronte');
 insert into PERGUNTA (PERGUNTA,a,b,c,d,e,RESPOSTA) values 
-('Qual o animal mais pesado do mundo?','A Orca','O Elefante Asiático','O Elefante Africano','A Baleia Azul','A Baleia Branca','A Baleia Azul');
+('Qual o animal mais pesado do mundo?','A orca','O elefante Asiático','O elefante Africano','A baleia Azul','A baleia Branca','A baleia Azul');
 insert into PERGUNTA (PERGUNTA,a,b,c,d,e,RESPOSTA) values 
 ('Em que parte do corpo humano você encontra uma amostra completa do seu DNA?','Nas unhas','Nos ossos','No tecido dos dedos','Nos cabelos','No coração','Nos cabelos');
 insert into PERGUNTA (PERGUNTA,a,b,c,d,e,RESPOSTA) values 
