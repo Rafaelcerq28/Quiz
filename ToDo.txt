@@ -1,4 +1,4 @@
-#1  Fazer introdução e guia das teclas para o usuario
+﻿#1  Fazer introdução e guia das teclas para o usuario
 
 
 
@@ -11,6 +11,6 @@ Aqui vao algumas dicas básicas para a conclusão dos desafios:
 
 #2 Para que suas informações sejam enviadas para jogo é necessário pressionar ENTER
 
-#3 O jogo possui 10 questões e são de multipla escolha
+#3 O jogo possui 10 questões e são de multipla escolha.
 
 #4 Boa sorte!
