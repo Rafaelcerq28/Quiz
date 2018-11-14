@@ -9,9 +9,9 @@ import java.util.Scanner;
 public class Perguntas {
 	
 	//ArryLists que armazenam as perguntas e as respostas, auxiliando na montagem do gabarito
-	ArrayList<String> questao = new ArrayList<String>();
-	ArrayList<String> respEscolhida = new ArrayList<String>();
-	ArrayList<String> respCorreta = new ArrayList<String>();
+	private ArrayList<String> questao = new ArrayList<String>();
+	private ArrayList<String> respEscolhida = new ArrayList<String>();
+	private ArrayList<String> respCorreta = new ArrayList<String>();
 	
 	//exibe o gabarito
 	public void gabarito() {
@@ -117,35 +117,35 @@ public class Perguntas {
 				cmp =  alternativa[0].equalsIgnoreCase(resposta);
 				gabarito.respEscolhida.add(alternativa[0]);
 				if(cmp == true) {
-					pontos = 10;
+					pontos = 1;
 				}
 				break;
 			case "B":
 				cmp =  alternativa[1].equalsIgnoreCase(resposta);
 				gabarito.respEscolhida.add(alternativa[1]);
 				if(cmp == true) {
-					pontos = 10;
+					pontos = 1;
 				}
 				break;
 			case "C":
 				cmp =  alternativa[2].equalsIgnoreCase(resposta);
 				gabarito.respEscolhida.add(alternativa[2]);
 				if(cmp == true) {
-					pontos = 10;
+					pontos = 1;
 				}
 				break;
 			case "D":
 				cmp =  alternativa[3].equalsIgnoreCase(resposta);
 				gabarito.respEscolhida.add(alternativa[3]);
 				if(cmp == true) {
-					pontos = 10;
+					pontos = 1;
 				}
 				break;
 			case "E":
 				cmp =  alternativa[4].equalsIgnoreCase(resposta);
 				gabarito.respEscolhida.add(alternativa[4]);
 				if(cmp == true) {
-					pontos = 10;
+					pontos = 1;
 				}
 				break;
 			default:
