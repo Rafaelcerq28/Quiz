@@ -12,7 +12,7 @@ public class Database {
 	
 	public static Connection conexao() throws SQLException {
 		try{
-			Connection c = DriverManager.getConnection("jdbc:mysql://localhost/quiz","root","");
+			Connection c = DriverManager.getConnection("jdbc:mysql://localhost/teste","root","");
 		
 			return c;
 		}catch(SQLException ex) {
