@@ -13,7 +13,7 @@ public class GeradorJogo {
 	}
 	
 	public void pausaDramatica() {
-		System.out.println("\nAguarde um momento... Estamos Calculando sua pontuação\n");
+		
 		for(int i = 0; i < 5; i++){	
 			try{
 				//Tenta pausar em 1s (1000 milisegundos).
@@ -23,7 +23,7 @@ public class GeradorJogo {
 				System.out.println("ERRO");
 			}
 		}
-		System.out.println("Pronto, sua pontuação foi calculada!\n");
+		
 	}
 	
 	public void cabecalhoJogo() {
