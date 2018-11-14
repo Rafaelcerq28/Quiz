@@ -4,6 +4,17 @@ import java.util.Scanner;
 
 public class Jogo extends GeradorJogo{
 	
+	public void intro() {
+		System.out.println("Bem vindo ao Quiz de conhecimentos gerais!\n");
+		System.out.println("Aqui vao algumas dicas básicas para a conclusão dos desafios:\n");
+		System.out.println("#1 Mantenha a calma (Isso é muito importante).");
+		System.out.println("#2 Para que suas informações sejam enviadas para jogo é necessário DIGITA-LAS e em seguida pressionar ENTER");
+		System.out.println("#3 O jogo possui 10 questões e são de multipla escolha, então escolha sabiamente");
+		System.out.println("#4 Boa sorte!\n");
+		
+		pausaDramatica();
+		
+	}
 	
 	public static void menu() throws SQLException {
 		Jogo j = new Jogo();
@@ -11,6 +22,7 @@ public class Jogo extends GeradorJogo{
 		Perguntas pergunta = new Perguntas();
 		String continuar = "s";
 		int pontos =0;
+		boolean passagem = false;
 		
 		while(!continuar.equalsIgnoreCase("n")) {
 			//Cria um jogador
@@ -26,6 +38,10 @@ public class Jogo extends GeradorJogo{
 				con.close();
 			}
 			
+			if(passagem == false) {
+				j.intro();
+			}
+			
 			//Inicio do jogo
 			Scanner sc = new Scanner(System.in);
 			
@@ -33,6 +49,8 @@ public class Jogo extends GeradorJogo{
 			j.subMenu();
 			System.out.print("Escolha uma das opções acima: ");
 			String opcao = sc.next();
+			
+			
 			
 			switch(opcao) {
 				
@@ -65,10 +83,12 @@ public class Jogo extends GeradorJogo{
 					
 					//Insere uma informação no rodapé ao terminar as perguntas
 					j.rodape();
-					
+			
+					System.out.println("\nAguarde um momento... Estamos Calculando sua pontuação\n");
 					//Uma pausa dramatica para "calcular os pontos"
 					j.pausaDramatica();
 					
+					System.out.println("Pronto, sua pontuação foi calculada!\n");
 					//Ao terminar o laço o jogador recebe a soma dos pontos 
 					
 					j1.setPontuacao(pontos);
@@ -86,6 +106,10 @@ public class Jogo extends GeradorJogo{
 					
 					//Insere a pontuação e o nome do jogador no banco de dados
 										
+					
+					Database.coletaPontuacao();
+					passagem = true;
+					
 					break;
 					
 				case "2":
@@ -98,12 +122,12 @@ public class Jogo extends GeradorJogo{
 					System.out.println("Opção Invalida.");
 			}
 			
-			System.out.print("\nContinuar(S/N)? ");
+			System.out.print("\nGostaria de retornar ao menu principal?(S/N)? ");
 			continuar = sc.next();
 			
 			while(!continuar.equalsIgnoreCase("s") && !continuar.equalsIgnoreCase("n")) {
 				System.out.println("Opcao invalida.\n");
-				System.out.print("\nContinuar(S/N)? ");
+				System.out.print("\nretornar ao menu principal?(S/N)? ");
 				continuar = sc.next();
 			}
 		}
