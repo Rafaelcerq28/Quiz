@@ -7,7 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Perguntas {
-	
+	/* ********************* REMOVER *********************************
 	//ArryLists que armazenam as perguntas e as respostas, auxiliando na montagem do gabarito
 	private ArrayList<String> questao = new ArrayList<String>();
 	private ArrayList<String> respEscolhida = new ArrayList<String>();
@@ -26,8 +26,9 @@ public class Perguntas {
 			i++;
 		}
 	}
-	
-	public static String[] coletaPergunta(String[] vetor,int cont, Perguntas gabarito) throws SQLException {
+	  ********************* REMOVER *********************************
+	*/
+	public static String[] coletaPergunta(String[] vetor,int cont, Gabarito gabarito) throws SQLException {
 		String [] alternativa = new String [5];
 		
 		Connection con = Database.conexao();
@@ -48,7 +49,7 @@ public class Perguntas {
 			String pergunta = rs.getString("pergunta");
 			System.out.println("\nPergunta: "+pergunta);
 			
-			gabarito.questao.add(pergunta); 
+			gabarito.setQuestao(pergunta); 
 			
 			for(int i=0;i<5;i++) {
 				 alternativa[i] = rs.getString(vetor[i]);
@@ -70,7 +71,7 @@ public class Perguntas {
 		return alternativa;
 	}
 	
-	public static int validaRespostas(String [] alternativa,int i, Perguntas gabarito) throws SQLException {
+	public static int validaRespostas(String [] alternativa,int i, Gabarito gabarito) throws SQLException {
 		
 		int pontos =0;
 	
@@ -88,7 +89,7 @@ public class Perguntas {
 		//armazena na variavel a String com a resposta
 		while(rs.next()) {
 			resposta = rs.getString("resposta");
-			gabarito.respCorreta.add(resposta);
+			gabarito.setRespCorreta(resposta);
 			//System.out.println("INSERIDO NO GABARITO!" + resposta);
 		}
 		
@@ -115,35 +116,35 @@ public class Perguntas {
 		switch(palpite.toUpperCase()) {
 			case "A":
 				cmp =  alternativa[0].equalsIgnoreCase(resposta);
-				gabarito.respEscolhida.add(alternativa[0]);
+				gabarito.setRespEscolhida(alternativa[0]);
 				if(cmp == true) {
 					pontos = 1;
 				}
 				break;
 			case "B":
 				cmp =  alternativa[1].equalsIgnoreCase(resposta);
-				gabarito.respEscolhida.add(alternativa[1]);
+				gabarito.setRespEscolhida(alternativa[1]);
 				if(cmp == true) {
 					pontos = 1;
 				}
 				break;
 			case "C":
 				cmp =  alternativa[2].equalsIgnoreCase(resposta);
-				gabarito.respEscolhida.add(alternativa[2]);
+				gabarito.setRespEscolhida(alternativa[2]);
 				if(cmp == true) {
 					pontos = 1;
 				}
 				break;
 			case "D":
 				cmp =  alternativa[3].equalsIgnoreCase(resposta);
-				gabarito.respEscolhida.add(alternativa[3]);
+				gabarito.setRespEscolhida(alternativa[3]);
 				if(cmp == true) {
 					pontos = 1;
 				}
 				break;
 			case "E":
 				cmp =  alternativa[4].equalsIgnoreCase(resposta);
-				gabarito.respEscolhida.add(alternativa[4]);
+				gabarito.setRespEscolhida(alternativa[4]);
 				if(cmp == true) {
 					pontos = 1;
 				}
