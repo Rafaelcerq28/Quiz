@@ -8,8 +8,8 @@ public class Jogo extends GeradorJogo{
 		System.out.println("Bem vindo ao Quiz de conhecimentos gerais!\n");
 		System.out.println("Aqui vao algumas dicas básicas para a conclusão dos desafios:\n");
 		System.out.println("#1 Mantenha a calma (Isso é muito importante).");
-		System.out.println("#2 Para que suas informações sejam enviadas para jogo é necessário DIGITA-LAS e em seguida pressionar ENTER");
-		System.out.println("#3 O jogo possui 10 questões e são de multipla escolha, então escolha sabiamente");
+		System.out.println("#2 Para que suas informações sejam enviadas para jogo é necessário DIGITA-LAS e em seguida pressionar ENTER.");
+		System.out.println("#3 O jogo possui 10 questões e são de multipla escolha, então escolha sabiamente.");
 		System.out.println("#4 Boa sorte!\n");
 		
 		pausaDramatica();
@@ -21,6 +21,7 @@ public class Jogo extends GeradorJogo{
 		Gabarito gabarito = new Gabarito();
 		Perguntas pergunta = new Perguntas();
 		String continuar = "s";
+		boolean encerrar = false;
 		int pontos =0;
 		boolean passagem = false;
 		
@@ -84,7 +85,7 @@ public class Jogo extends GeradorJogo{
 					//Insere uma informação no rodapé ao terminar as perguntas
 					j.rodape();
 			
-					System.out.println("\nAguarde um momento... Estamos Calculando sua pontuação\n");
+					System.out.println("\nAguarde um momento... Estamos Calculando sua pontuação.\n");
 					//Uma pausa dramatica para "calcular os pontos"
 					j.pausaDramatica();
 					
@@ -102,6 +103,7 @@ public class Jogo extends GeradorJogo{
 					if(exibir.equalsIgnoreCase("s")) {
 						//Exibe um gabarito do quiz
 						gabarito.getGabarito();
+						j.pausaDramatica();
 					}					
 					
 					//Insere a pontuação e o nome do jogador no banco de dados
@@ -117,9 +119,16 @@ public class Jogo extends GeradorJogo{
 					Database.coletaPontuacao();
 					
 					break;
-				
+				case "3":
+					System.out.println("\nVolte quando estiver preparado!");
+					encerrar = true;
+					break;
 				default:
 					System.out.println("Opção Invalida.");
+			}
+			
+			if(encerrar == true) {
+				break;
 			}
 			
 			System.out.print("\nGostaria de retornar ao menu principal?(S/N)? ");
