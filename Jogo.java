@@ -18,7 +18,7 @@ public class Jogo extends GeradorJogo{
 	
 	public static void menu() throws SQLException {
 		Jogo j = new Jogo();
-		Perguntas gabarito = new Perguntas();
+		Gabarito gabarito = new Gabarito();
 		Perguntas pergunta = new Perguntas();
 		String continuar = "s";
 		int pontos =0;
@@ -101,7 +101,7 @@ public class Jogo extends GeradorJogo{
 					
 					if(exibir.equalsIgnoreCase("s")) {
 						//Exibe um gabarito do quiz
-						gabarito.gabarito();
+						gabarito.getGabarito();
 					}					
 					
 					//Insere a pontuação e o nome do jogador no banco de dados
