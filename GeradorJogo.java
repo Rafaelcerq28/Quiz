@@ -6,7 +6,7 @@ import java.util.Random;
 public class GeradorJogo {
 
 	public void subMenu() {
-		System.out.println("#################################");
+		System.out.println("\n#################################");
 		System.out.println("#\t1 - Jogar\t\t#");
 		System.out.println("#\t2 - Exibir rank\t\t#");
 		System.out.println("#\t3 - Sair\t\t#");
