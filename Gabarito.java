@@ -34,7 +34,7 @@ public class Gabarito {
 			
 			if(i <= 8) {
 				System.out.println("Gostaria de ver a proxima nota? ");
-				System.out.println("(S)Continua - (N)Encerra a exibição");
+				System.out.print("(S)Continua - (N)Encerra a exibição => ");
 				
 				continuar = sc.next();
 				
