@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Gabarito {
 	//ArryLists que armazenam as perguntas e as respostas, auxiliando na montagem do gabarito
@@ -21,6 +22,8 @@ public class Gabarito {
 	//exibe o gabarito
 	public void getGabarito() {
 		int i = 0;
+		String continuar;
+		Scanner sc = new Scanner(System.in);
 		
 		for(String s : questao) {
 			System.out.printf("\nQuestao %d)\n",i+1);
@@ -28,7 +31,20 @@ public class Gabarito {
 			System.out.println("Resposta Escolhida: " + respEscolhida.get(i));
 			System.out.println("Resposta Correta: " + respCorreta.get(i));
 			System.out.println("\n");
+			
+			if(i <= 8) {
+				System.out.println("Gostaria de ver a proxima nota? ");
+				System.out.println("(S)Continua - (N)Encerra a exibição");
+				
+				continuar = sc.next();
+				
+				if(continuar.equalsIgnoreCase("n") || i > 8) {
+					System.out.println("\nEncerrando exibição do gabarito.\n");
+					break;
+				}
+			}
 			i++;
 		}
+		System.out.println("\nO rank será exibido em breve.\n");
 	}
 }

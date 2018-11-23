@@ -7,8 +7,9 @@ public class GeradorJogo {
 
 	public void subMenu() {
 		System.out.println("#################################");
-		System.out.println("#\t1- Jogar\t\t#");
+		System.out.println("#\t1 - Jogar\t\t#");
 		System.out.println("#\t2 - Exibir rank\t\t#");
+		System.out.println("#\t3 - Sair\t\t#");
 		System.out.println("#################################");
 	}
 	
@@ -17,7 +18,7 @@ public class GeradorJogo {
 		for(int i = 0; i < 5; i++){	
 			try{
 				//Tenta pausar em 1s (1000 milisegundos).
-				Thread.sleep(800);
+				Thread.sleep(500);
 			}catch (InterruptedException e){	
 				//Erro na execução.
 				System.out.println("ERRO");
