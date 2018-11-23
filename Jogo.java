@@ -24,7 +24,7 @@ public class Jogo extends GeradorJogo{
 		boolean encerrar = false;
 		int pontos =0;
 		boolean passagem = false;
-		
+		boolean rankVisualisado = false;
 		while(!continuar.equalsIgnoreCase("n")) {
 			//Cria um jogador
 			Jogador j1 = new Jogador();
@@ -39,7 +39,7 @@ public class Jogo extends GeradorJogo{
 				con.close();
 			}
 			
-			if(passagem == false) {
+			if(passagem == false && rankVisualisado == false) {
 				j.intro();
 			}
 			
@@ -117,10 +117,14 @@ public class Jogo extends GeradorJogo{
 				case "2":
 					System.out.println("\n\t     RANK");
 					Database.coletaPontuacao();
+					rankVisualisado = true;
 					
 					break;
 				case "3":
-					System.out.println("\nVolte quando estiver preparado!");
+					if(passagem ==false) {
+						System.out.println("\nVolte quando estiver preparado!");
+					}
+					
 					encerrar = true;
 					break;
 				default:
