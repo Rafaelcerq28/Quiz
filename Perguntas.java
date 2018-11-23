@@ -7,27 +7,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Perguntas {
-	/* ********************* REMOVER *********************************
-	//ArryLists que armazenam as perguntas e as respostas, auxiliando na montagem do gabarito
-	private ArrayList<String> questao = new ArrayList<String>();
-	private ArrayList<String> respEscolhida = new ArrayList<String>();
-	private ArrayList<String> respCorreta = new ArrayList<String>();
-	
-	//exibe o gabarito
-	public void gabarito() {
-		int i = 0;
-		
-		for(String s : questao) {
-			System.out.printf("\nQuestao %d)\n",i+1);
-			System.out.println("Pergunta: " + questao.get(i));
-			System.out.println("Resposta Escolhida: " + respEscolhida.get(i));
-			System.out.println("Resposta Correta: " + respCorreta.get(i));
-			System.out.println("\n");
-			i++;
-		}
-	}
-	  ********************* REMOVER *********************************
-	*/
+
 	public static String[] coletaPergunta(String[] vetor,int cont, Gabarito gabarito) throws SQLException {
 		String [] alternativa = new String [5];
 		
