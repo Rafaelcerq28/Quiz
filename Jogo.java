@@ -82,7 +82,7 @@ public class Jogo extends GeradorJogo{
 						//Retorna um inteiro passando a pontuação para a variavel pontos
 						pontos += pergunta.validaRespostas(perguntas,i,gabarito);
 						System.out.print("\n----------------------------------------------------------");
-						System.out.print("----------------------------------------------------------");
+						System.out.print("---------------------------");
 					}
 					
 					//Insere uma informação no rodapé ao terminar as perguntas
