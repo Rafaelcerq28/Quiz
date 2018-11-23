@@ -18,7 +18,7 @@ public class GeradorJogo {
 		for(int i = 0; i < 5; i++){	
 			try{
 				//Tenta pausar em 1s (1000 milisegundos).
-				Thread.sleep(500);
+				Thread.sleep(1000);
 			}catch (InterruptedException e){	
 				//Erro na execução.
 				System.out.println("ERRO");
@@ -31,10 +31,12 @@ public class GeradorJogo {
 		System.out.println("\n#################################");
 		System.out.println("#\tQUE OS JOGOS COMECEM!\t#");
 		System.out.println("#################################\n");
+		System.out.print("----------------------------------------------------------");
+		System.out.print("---------------------------");
 	}
 
 	public void rodape() {
-		System.out.println("#################################");
+		System.out.println("\n#################################");
 		System.out.println("#\tJogo Finalizado!\t#");
 		System.out.println("#################################");
 	}
