@@ -23,8 +23,10 @@ public class Jogo extends GeradorJogo{
 		String continuar = "s";
 		boolean encerrar = false;
 		int pontos =0;
+		
 		boolean passagem = false;
 		boolean rankVisualisado = false;
+		
 		while(!continuar.equalsIgnoreCase("n")) {
 			//Cria um jogador
 			Jogador j1 = new Jogador();
@@ -79,7 +81,8 @@ public class Jogo extends GeradorJogo{
 						//Metodo que recebe as perguntas, coleta e valida as respostas no banco de dados
 						//Retorna um inteiro passando a pontuação para a variavel pontos
 						pontos += pergunta.validaRespostas(perguntas,i,gabarito);
-						
+						System.out.print("\n----------------------------------------------------------");
+						System.out.print("----------------------------------------------------------");
 					}
 					
 					//Insere uma informação no rodapé ao terminar as perguntas
